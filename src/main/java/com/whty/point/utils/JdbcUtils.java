@@ -129,7 +129,7 @@ public final class JdbcUtils {
                 Map<String, Object> map = new LinkedHashMap<>();
                 for (int i = 1; i <= count; i++) {
                     String name = metaData.getColumnName(i);
-                    Object value = rs.getObject(name);
+                    Object value = rs.getObject(i);
                     map.put(name, value);
                 }
                 mapList.add(map);
